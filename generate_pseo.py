@@ -66,7 +66,6 @@ os.makedirs(output_dir, exist_ok=True)
 index_links = []
 sitemap_urls = []
 count = 0
-# URL base aggiornato correttamente al tuo Workers attivo
 base_url = "https://brendaglobo-pseo.geom-cmarco.workers.dev"
 
 for i in range(len(software_list)):
@@ -112,13 +111,14 @@ for i in range(len(software_list)):
                 f.write(html_content)
             count += 1
 
-# Homepage
+# Homepage (con Google Search Console verification tag)
 links_html_str = "\n".join(index_links)
 index_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="-_QOXuXXhL7Ata7XDMemgIZfP4nrfa2VuAb9nuC7_Yc" />
     <title>BrendaGlobo | B2B Enterprise Software Comparisons</title>
 </head>
 <body style="font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6;">
