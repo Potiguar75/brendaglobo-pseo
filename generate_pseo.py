@@ -66,7 +66,8 @@ os.makedirs(output_dir, exist_ok=True)
 index_links = []
 sitemap_urls = []
 count = 0
-base_url = "https://brendaglobo.pages.dev"
+# URL base aggiornato correttamente al tuo Workers attivo
+base_url = "https://brendaglobo-pseo.geom-cmarco.workers.dev"
 
 for i in range(len(software_list)):
     for j in range(len(software_list)):
