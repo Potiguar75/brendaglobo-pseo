@@ -101,8 +101,8 @@ for i in range(len(software_list)):
     <div style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
         <h3>Ready to choose?</h3>
         <p>Explore official plans and current offers:</p>
-        <a href="{sw_a['aff_link']}" target="_blank" style="display: inline-block; padding: 12px 24px; background: #0052cc; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold;">Check {sw_a['name']}</a>
-        <a href="{sw_b['aff_link']}" target="_blank" style="display: inline-block; padding: 12px 24px; background: #4a5568; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; margin-left: 10px;">Check {sw_b['name']}</a>
+        <a href="{sw_a['aff_link']}?utm_source=pseo&utm_medium=comparison&utm_campaign={sw_a['id']}-vs-{sw_b['id']}" target="_blank" rel="sponsored noopener noreferrer" style="display: inline-block; padding: 12px 24px; background: #0052cc; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold;">Check {sw_a['name']}</a>
+        <a href="{sw_b['aff_link']}?utm_source=pseo&utm_medium=comparison&utm_campaign={sw_a['id']}-vs-{sw_b['id']}" target="_blank" rel="sponsored noopener noreferrer" style="display: inline-block; padding: 12px 24px; background: #4a5568; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; margin-left: 10px;">Check {sw_b['name']}</a>
     </div>
 </body>
 </html>"""
@@ -142,5 +142,3 @@ sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 
 with open(os.path.join(output_dir, "sitemap.xml"), "w", encoding="utf-8") as f:
     f.write(sitemap_content)
-
-print(f"Generazione completata! Create esattamente {count} pagine nella cartella '{output_dir}'.")
