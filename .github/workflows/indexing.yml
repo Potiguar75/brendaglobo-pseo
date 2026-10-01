@@ -2,8 +2,8 @@ name: Daily SEO Indexing
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # Si attiva ogni giorno alle 08:00 UTC
-  workflow_dispatch:     # Permette anche di avviarlo manualmente da GitHub
+    - cron: '0 8 * * *'
+  workflow_dispatch:
 
 jobs:
   indexing:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Create key.json from Secret
         run: |
-          echo "${{ secrets.GCP_SA_KEY }}" > key.json
+          echo '${{ secrets.GCP_SA_KEY }}' > key.json
 
       - name: Run Indexing Script
         run: |
